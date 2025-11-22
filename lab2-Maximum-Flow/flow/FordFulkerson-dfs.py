@@ -3,7 +3,6 @@ import os
 
 def FordFulkerson( G ) :
 
-
     def dfs( u , parent , flowCapacity) :
         if u == t :
             return flowCapacity
@@ -48,11 +47,8 @@ def FordFulkerson( G ) :
         v = t
         while v != s :
             u = parent[v]
-
             residualGraph[u][v] -= currentFlow
-
             residualGraph[v][u] += currentFlow
-
             v = u
 
     return maxFlow
@@ -62,4 +58,4 @@ G = dimacs.Graph( "Graphs" , 'simple' )
 G.loadDirectedWeightedGraph()
 print( FordFulkerson( G ) , G.S )
 
-dimacs.Tests( os.path.abspath("Graphs")  , FordFulkerson, "loadDirectedWeightedGraph" , False )
+dimacs.Tests( os.path.abspath("Graphs")  , FordFulkerson, "loadDirectedWeightedGraph" , True , { "grid100x100" }  )

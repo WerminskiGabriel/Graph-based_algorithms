@@ -51,8 +51,8 @@ def edmondKarps( G ) :
 
     return maxFlow
 
-G = dimacs.Graph( "Graphs" , 'simple' )
-G.loadDirectedWeightedGraph()
-print( edmondKarps( G ) , G.S )
+# G = dimacs.Graph( "Graphs" , 'simple' )
+# G.loadDirectedWeightedGraph()
+#print( edmondKarps( G ) , G.S )
 
-dimacs.Tests( os.path.abspath("Graphs")  , edmondKarps, "loadDirectedWeightedGraph" , False )
+dimacs.Tests( os.path.abspath("Graphs")  , edmondKarps, "loadDirectedWeightedGraph" , True , { "grid100x100" } )
