@@ -58,4 +58,4 @@ G = dimacs.Graph( "Graphs" , 'simple' )
 G.loadDirectedWeightedGraph()
 print( FordFulkerson( G ) , G.S )
 
-dimacs.Tests( os.path.abspath("Graphs")  , FordFulkerson, "loadDirectedWeightedGraph" , True , { "grid100x100" }  )
+dimacs.Tests( os.path.abspath("Graphs")  , FordFulkerson, "loadDirectedWeightedGraph" , True , { "grid100x100" ,"clique100" }  )

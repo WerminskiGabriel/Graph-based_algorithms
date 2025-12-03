@@ -2,7 +2,7 @@ import dimacs
 import os
 from collections import deque
 
-def StoerWagner( G ) :
+def Menger( G ) :
 
     def edmondKarps(  s , t ) :
 
@@ -59,4 +59,4 @@ def StoerWagner( G ) :
 
     return result
 
-dimacs.Tests(os.path.abspath("Graphs"), StoerWagner, "loadDirectedWeightedGraph", True  , { "clique200" , "grid100x100" } )
+dimacs.Tests( os.path.abspath("Graphs") , Menger , "loadDirectedWeightedGraph" , True , { "clique200" , "grid100x100" } )
