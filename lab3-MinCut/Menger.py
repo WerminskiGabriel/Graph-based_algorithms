@@ -59,4 +59,7 @@ def Menger( G ) :
 
     return result
 
-dimacs.Tests( os.path.abspath("Graphs") , Menger , "loadDirectedWeightedGraph" , True , { "clique200" , "grid100x100" } )
+G = dimacs.Graph()
+V ,
+
+#dimacs.Tests( os.path.abspath("Graphs") , Menger , "loadDirectedWeightedGraph" , True , { "clique200" , "grid100x100" } )
